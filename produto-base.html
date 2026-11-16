@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TROCAR: nome do produto -->
+  <title>NOME DO PRODUTO | NOME DA EMPRESA</title>
+  <meta name="description" content="TROCAR: resumo do produto em uma frase.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/produto.css">
+</head>
+
+<!-- TROCAR: imagem de fundo deste produto (ex.: img/fundo_mesh.png) -->
+<body style="--fundo: url('img/fundo_nomeproduto.png');">
+
+  <!-- ================= MENU FIXO (igual em todas as páginas) ================= -->
+  <header class="menu-fixo">
+    <div class="conteudo">
+      <a href="index.html" class="logo">NOME DA EMPRESA</a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="comunicacao-segura.html">Comunicação Segura</a></li>
+          <li><a href="rota-segura.html">Rota Segura</a></li>
+          <li><a href="ambientes-blindados.html">Ambientes Blindados</a></li>
+          <li><a href="estrategia.html">Estratégia</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <h1>TÍTULO PRINCIPAL IMPACTANTE E ESTRATÉGICO</h1>
+    <p>Subtítulo de reforço emocional: o que o cliente ganha em segurança e tranquilidade.</p>
+    <a href="#contato" class="btn btn-principal">Solicitar Demonstração Segura</a>
+  </section>
+
+  <main>
+    <!-- ================= SOBRE O PRODUTO ================= -->
+    <section class="section sobre">
+      <h2>Sobre o Produto</h2>
+      <p>Descreva aqui o que é o produto, qual problema resolve e por que é diferente.</p>
+      <p>Segundo parágrafo opcional com detalhes de uso.</p>
+    </section>
+
+    <!-- ================= CAMADAS DE PROTEÇÃO ================= -->
+    <section class="section protecao">
+      <h2>Camadas de Proteção</h2>
+      <div class="grade">
+        <div class="cartao">
+          <h3>Camada 1</h3>
+          <p>Descrição curta da camada.</p>
+        </div>
+        <div class="cartao">
+          <h3>Camada 2</h3>
+          <p>Descrição curta da camada.</p>
+        </div>
+        <div class="cartao">
+          <h3>Camada 3</h3>
+          <p>Descrição curta da camada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INFRAESTRUTURA (apague se não existir) ================= -->
+    <section class="section infraestrutura" id="infraestrutura">
+      <h2>Infraestrutura de Proteção</h2>
+      <div class="grade">
+        <div class="cartao">
+          <h3>Componente</h3>
+          <p>Detalhe técnico.</p>
+        </div>
+        <div class="cartao">
+          <h3>Componente</h3>
+          <p>Detalhe técnico.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INDICADO PARA ================= -->
+    <section class="section indicado">
+      <h2>Indicado para</h2>
+      <ul class="lista-check">
+        <li>Perfil de cliente 1</li>
+        <li>Perfil de cliente 2</li>
+        <li>Perfil de cliente 3</li>
+      </ul>
+    </section>
+
+    <!-- ================= COMPLEMENTOS (opcional) ================= -->
+    <section class="section complementos">
+      <h2>Complementos Disponíveis</h2>
+      <div class="grade">
+        <div class="cartao">
+          <h3>Complemento</h3>
+          <p>O que acrescenta ao produto.</p>
+        </div>
+        <div class="cartao">
+          <h3>Complemento</h3>
+          <p>O que acrescenta ao produto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PERGUNTAS FREQUENTES (opcional) ================= -->
+    <section class="section faq">
+      <h2>Perguntas Frequentes</h2>
+      <details>
+        <summary>Pergunta 1?</summary>
+        <p>Resposta 1.</p>
+      </details>
+      <details>
+        <summary>Pergunta 2?</summary>
+        <p>Resposta 2.</p>
+      </details>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ DE AÇÃO ================= -->
+  <footer class="cta" id="contato">
+    <h2>Pronto para elevar o seu nível de proteção?</h2>
+    <div class="botoes">
+      <!-- TROCAR: links reais (WhatsApp, formulário, etc.) -->
+      <a href="#" class="btn btn-principal">Solicitar Demonstração Segura</a>
+      <a href="#infraestrutura" class="btn">Ver Infraestrutura</a>
+      <a href="comparar-dispositivos.html" class="btn">Comparar Dispositivos</a>
+    </div>
+    <small>© NOME DA EMPRESA. Todos os direitos reservados.</small>
+  </footer>
+
+  <script>
+    // Menu no celular
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.menu-fixo nav');
+    toggle.addEventListener('click', () => {
+      const aberto = nav.classList.toggle('aberto');
+      toggle.setAttribute('aria-expanded', aberto);
+    });
+    // Destaca automaticamente o link da página atual
+    const atual = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.menu-fixo nav a').forEach(a => {
+      if (a.getAttribute('href') === atual) a.classList.add('ativo');
+    });
+  </script>
+</body>
+</html>
