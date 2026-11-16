@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/produto.css">
+  <script src="js/site.js" defer></script>
 </head>
 
 <!-- TROCAR: imagem de fundo deste produto (ex.: img/fundo_mesh.png) -->
@@ -35,9 +36,11 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero">
+    <span class="kicker">NOME DO PRODUTO</span>
     <h1>TÍTULO PRINCIPAL IMPACTANTE E ESTRATÉGICO</h1>
     <p>Subtítulo de reforço emocional: o que o cliente ganha em segurança e tranquilidade.</p>
     <a href="#contato" class="btn btn-principal">Solicitar Demonstração Segura</a>
+    <span class="nota">Frase curta de confiança (ex.: Atendimento reservado, de pessoa para pessoa.)</span>
   </section>
 
   <main>
@@ -133,19 +136,5 @@
     <small>© NOME DA EMPRESA. Todos os direitos reservados.</small>
   </footer>
 
-  <script>
-    // Menu no celular
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.menu-fixo nav');
-    toggle.addEventListener('click', () => {
-      const aberto = nav.classList.toggle('aberto');
-      toggle.setAttribute('aria-expanded', aberto);
-    });
-    // Destaca automaticamente o link da página atual
-    const atual = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.menu-fixo nav a').forEach(a => {
-      if (a.getAttribute('href') === atual) a.classList.add('ativo');
-    });
-  </script>
 </body>
 </html>
